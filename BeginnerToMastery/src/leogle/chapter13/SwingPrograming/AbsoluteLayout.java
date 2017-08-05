@@ -15,7 +15,7 @@ public class AbsoluteLayout extends JFrame {
 		setTitle("本窗体使用绝对布局");
 		// 2.使该窗体取消布局管理器设置
 		setLayout(null);
-		// 3.绝对定位窗体的位置、大小
+		// 3.设置窗体的位置、大小
 		setBounds(0, 0, 500, 500);
 		// 4.获取容器对象
 		Container container = getContentPane();

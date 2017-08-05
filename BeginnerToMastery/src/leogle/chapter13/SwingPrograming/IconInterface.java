@@ -12,6 +12,7 @@ import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
 public class IconInterface implements Icon {
+
 	// 1.声明图标的宽
 	private int width;
 	// 2.声明图标的高
@@ -42,9 +43,9 @@ public class IconInterface implements Icon {
 	}
 
 	public static void main(String[] args) {
-		IconInterface icon = new IconInterface(20, 20);
+		Icon icon = new IconInterface(20, 20);
 		// 1.创建一个带文本和图标的标签，并设置标签上的文字在标签正中间
-		JLabel jl = new JLabel("测试", icon, SwingConstants.CENTER);
+		JLabel jl = new JLabel("测试", icon, SwingConstants.LEFT);
 
 		// 2.创建一个JFrame窗口
 		JFrame jf = new JFrame();
@@ -55,6 +56,7 @@ public class IconInterface implements Icon {
 		jf.setBounds(100, 100, 500, 500);
 		jf.setVisible(true);
 		jf.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
 	}
 
 }

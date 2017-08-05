@@ -38,6 +38,7 @@ public class JButtonClass extends JFrame {
 		jb.setMaximumSize(new Dimension(30, 30));
 		// 4.为按钮设置图标
 		jb.setIcon(icon);
+		jb.setText("button6");
 		jb.setHideActionText(true);
 		// 5.设置按钮提示为文字
 		jb.setToolTipText("图片按钮");

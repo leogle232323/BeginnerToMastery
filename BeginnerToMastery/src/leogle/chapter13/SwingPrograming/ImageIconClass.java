@@ -16,25 +16,25 @@ public class ImageIconClass extends JFrame {
 
 	public ImageIconClass() {
 		Container container = getContentPane();
-		// 1.´´½¨Ò»¸ö±êÇ©
-		JLabel jl = new JLabel("ÕâÊÇÒ»¸öJLabel±êÇ©", JLabel.CENTER);
-		// 2.»ñÈ¡Í¼Æ¬ËùÔÚµÄURL
+		// 1.ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ç©
+		JLabel jl = new JLabel("è¿™æ˜¯ä¸€ä¸ªJLabelæ ‡ç­¾", JLabel.CENTER);
+		// 2.ï¿½ï¿½È¡Í¼Æ¬ï¿½ï¿½ï¿½Úµï¿½URL
 		URL url = ImageIconClass.class.getResource("wo.png");
-		// 3.ÊµÀı»¯Icon¶ÔÏó
-		Icon icon = new ImageIcon(url, "ÕâÊÇÎÒ×Ô¼º");
-		// 4.Îª±êÇ©ÉèÖÃÍ¼Æ¬
+		// 3.Êµï¿½ï¿½ï¿½ï¿½Iconï¿½ï¿½ï¿½ï¿½
+		Icon icon = new ImageIcon(url, "è¿™æ˜¯å›¾æ ‡æè¿°");
+		// 4.Îªï¿½ï¿½Ç©ï¿½ï¿½ï¿½ï¿½Í¼Æ¬
 		jl.setIcon(icon);
-		// 5.ÉèÖÃÎÄ×Ö·ÅÖÃÔÚ±êÇ©ÖĞ¼ä
+		// 5.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ú±ï¿½Ç©ï¿½Ğ¼ï¿½
 		jl.setHorizontalAlignment(SwingConstants.CENTER);
-		// 6.ÉèÖÃ±êÇ©Îª²»Í¸Ã÷×´Ì¬
+		// 6.ï¿½ï¿½ï¿½Ã±ï¿½Ç©Îªï¿½ï¿½Í¸ï¿½ï¿½×´Ì¬
 		jl.setOpaque(true);
-		// 7.½«±êÇ©Ìí¼Óµ½ÈİÆ÷ÖĞ
+		// 7.ï¿½ï¿½ï¿½ï¿½Ç©ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		container.add(jl);
-		// 8.ÉèÖÃ´°ÌåÎ»ÖÃ¡¢´óĞ¡
+		// 8.ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Î»ï¿½Ã¡ï¿½ï¿½ï¿½Ğ¡
 		setBounds(200, 200, 500, 500);
-		// 9.ÉèÖÃ´°ÌåÎª¿É¼û
+		// 9.ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Îªï¿½É¼ï¿½
 		setVisible(true);
-		// 10.ÉèÖÃ´°Ìå¹Ø±Õ·½Ê½
+		// 10.ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Ø±Õ·ï¿½Ê½
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	}
 

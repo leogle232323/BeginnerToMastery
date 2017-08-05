@@ -1,5 +1,6 @@
 package leogle.chapter13.SwingPrograming;
 
+import java.awt.BorderLayout;
 import java.awt.Container;
 
 import javax.swing.JFrame;
@@ -19,7 +20,7 @@ public class JScrollPaneClass extends JFrame {
 		// 2.创建JScrollPane面板对象
 		JScrollPane js = new JScrollPane(jt);
 		// 3.将面板添加到容器中
-		container.add(js);
+		container.add(js, BorderLayout.NORTH);
 
 		setSize(500, 500);
 		setVisible(true);

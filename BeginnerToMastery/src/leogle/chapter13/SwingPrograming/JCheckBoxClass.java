@@ -4,7 +4,10 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -23,9 +26,11 @@ public class JCheckBoxClass extends JFrame {
 		JPanel panel1 = new JPanel();
 		JPanel panel2 = new JPanel();
 
-		JCheckBox jc1 = new JCheckBox();
-		JCheckBox jc2 = new JCheckBox();
-		JCheckBox jc3 = new JCheckBox();
+		URL url = JCheckBoxClass.class.getResource("wo.png");
+		Icon icon = new ImageIcon(url);
+		JCheckBox jc1 = new JCheckBox("复选框1", icon, true);
+		JCheckBox jc2 = new JCheckBox("复选框2", true);
+		JCheckBox jc3 = new JCheckBox("复选框3");
 
 		JTextArea jt = new JTextArea(10, 20);
 
@@ -40,9 +45,9 @@ public class JCheckBoxClass extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (jc1.isSelected()) {
-					jt.append("复选框 1 被选中\n");
+					jt.append(jc1.getText() + " 被选中\n");
 				} else {
-					jt.append("复选框1 被取消选选中 \n");
+					jt.append(jc1.getText() + " 被取消选选中 \n");
 				}
 
 			}

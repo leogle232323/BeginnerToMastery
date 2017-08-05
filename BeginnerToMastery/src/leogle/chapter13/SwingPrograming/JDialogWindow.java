@@ -21,43 +21,43 @@ public class JDialogWindow extends JDialog {
 	}
 
 	public JDialogWindow(MyJFrame frame) {
-		// 1.ÊµÀı»¯Ò»¸öJDialogÀà¶ÔÏó£¬Ö¸¶¨¶Ô»°¿òµÄ¸¸´°Ìå¡¢´°Ìå±êÌâºÍÀàĞÍ
-		super(frame, "µÚÒ»¸öJDialog´°Ìå", true);
+		// 1.Êµï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½JDialogï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ô»ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½å¡¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		super(frame, "ç¬¬ä¸€ä¸ªJDialogçª—ä½“", true);
 		Container container = getContentPane();
-		container.add(new JLabel("ÕâÊÇÒ»¸ö¶Ô»°¿ò"));
+		container.add(new JLabel("è¿™æ˜¯ä¸€ä¸ªå¯¹è¯æ¡†"));
 		setBounds(200, 200, 200, 200);
 	}
 }
 
 class MyJFrame extends JFrame {
-	// ĞòÁĞ»¯
+	// ï¿½ï¿½ï¿½Ğ»ï¿½
 	private static final long serialVersionUID = 1L;
 
 	public MyJFrame() {
-		// 1.´´½¨Ò»¸öÈİÆ÷
+		// 1.ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		Container container = getContentPane();
 		container.setLayout(null);
 
-		// 2.ÔÚ´°ÌåÖĞÉèÖÃ±êÇ©
-		JLabel jl = new JLabel("ÕâÊÇÒ»¸öJFrame´°Ìå");
-		// 3.½«±êÇ©µÄÎÄ×ÖÖÃÓÚ±êÇ©ÖĞ¼äÎ»ÖÃ
+		// 2.ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã±ï¿½Ç©
+		JLabel jl = new JLabel("è¿™æ˜¯ä¸€ä¸ªJFrameçª—ä½“");
+		// 3.ï¿½ï¿½ï¿½ï¿½Ç©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú±ï¿½Ç©ï¿½Ğ¼ï¿½Î»ï¿½ï¿½
 		jl.setHorizontalAlignment(SwingConstants.CENTER);
 		container.add(jl);
 
-		// 4.¶¨ÒåÒ»¸ö°´Å¥
-		JButton jb = new JButton("µ¯³ö¶Ô»°¿ò");
+		// 4.ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Å¥
+		JButton jb = new JButton("å¼¹å‡ºå¯¹è¯æ¡†");
 		jb.setBounds(100, 100, 100, 21);
-		// 5.Îª°´Å¥Ìí¼ÓÊó±êµ¥»÷ÊÂ¼ş
+		// 5.Îªï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½êµ¥ï¿½ï¿½ï¿½Â¼ï¿½
 		jb.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// Ê¹JDialog´°Ìå¿É¼û
+				// Ê¹JDialogï¿½ï¿½ï¿½ï¿½É¼ï¿½
 				new JDialogWindow(MyJFrame.this).setVisible(true);
 			}
 
 		});
-		// 6.½«°´Å¥Ìí¼Óµ½ÈİÆ÷
+		// 6.ï¿½ï¿½ï¿½ï¿½Å¥ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½
 		container.add(jb);
 
 		container.setBackground(Color.white);

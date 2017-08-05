@@ -2,8 +2,11 @@ package leogle.chapter13.SwingPrograming;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
+import java.net.URL;
 
 import javax.swing.ButtonGroup;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JRadioButton;
 import javax.swing.WindowConstants;
@@ -15,12 +18,14 @@ public class JRadioButtonClass extends JFrame {
 	public JRadioButtonClass() {
 		setLayout(new FlowLayout());
 
+		URL url = JRadioButtonClass.class.getResource("wo.png");
+		Icon icon = new ImageIcon(url);
 		Container container = getContentPane();
 		// 1.创建单选按钮
-		JRadioButton jr1 = new JRadioButton();
+		JRadioButton jr1 = new JRadioButton("单选按钮1", icon, true);
 		jr1.setSelected(true);
-		JRadioButton jr2 = new JRadioButton();
-		JRadioButton jr3 = new JRadioButton();
+		JRadioButton jr2 = new JRadioButton("单选按钮2");
+		JRadioButton jr3 = new JRadioButton("单选按钮3");
 		// 2.将单选按钮添加到按钮组中
 		ButtonGroup group = new ButtonGroup();
 		group.add(jr1);

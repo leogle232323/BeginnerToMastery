@@ -10,34 +10,34 @@ import javax.swing.WindowConstants;
 
 public class JFrameWindow extends JFrame {
 
-	// ÐòÁÐ»¯
+	// ï¿½ï¿½ï¿½Ð»ï¿½
 	private static final long serialVersionUID = 1L;
 
 	public static void main(String[] args) {
-		new JFrameWindow("´´½¨Ò»¸öJFrame´°Ìå");
+		new JFrameWindow("åˆ›å»ºä¸€ä¸ªJFrameçª—ä½“");
 	}
 
 	public JFrameWindow(String title) {
-		// 1.ÊµÀý»¯JFrame¶ÔÏó
+		// 1.Êµï¿½ï¿½ï¿½ï¿½JFrameï¿½ï¿½ï¿½ï¿½
 		JFrame jf = new JFrame(title);
 
-		// 2.»ñÈ¡Ò»¸öÈÝÆ÷
+		// 2.ï¿½ï¿½È¡Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		Container container = jf.getContentPane();
 
-		// 3.´´½¨Ò»¸öJLabel±êÇ©
-		JLabel jl = new JLabel("ÕâÊÇÒ»¸öJLabel±êÇ©");
-		// 4.Ê¹±êÇ©ÉÏµÄÎÄ×Ö¾ÓÖÐ
+		// 3.ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½JLabelï¿½ï¿½Ç©
+		JLabel jl = new JLabel("è¿™æ˜¯ä¸€ä¸ªJFrameçª—ä½“");
+		// 4.Ê¹ï¿½ï¿½Ç©ï¿½Ïµï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½
 		jl.setHorizontalAlignment(SwingConstants.CENTER);
-		// 5.½«±êÇ©Ìí¼Óµ½ÈÝÆ÷ÖÐ
+		// 5.ï¿½ï¿½ï¿½ï¿½Ç©ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		container.add(jl);
 
-		// 6.ÉèÖÃÈÝÆ÷µÄ±³¾°ÑÕÉ«
+		// 6.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½É«
 		container.setBackground(Color.gray);
-		// 7.Ê¹´°Ìå¿ÉÊÓ
+		// 7.Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		jf.setVisible(true);
-		// 8.ÉèÖÃ´°Ìå´óÐ¡¡¢Î»ÖÃ
+		// 8.ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½Î»ï¿½ï¿½
 		jf.setBounds(100, 100, 200, 200);
-		// 9.ÉèÖÃ´°Ìå¹Ø±Õ·½Ê½
+		// 9.ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Ø±Õ·ï¿½Ê½
 		jf.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 	}

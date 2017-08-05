@@ -1,5 +1,6 @@
 package leogle.chapter13.SwingPrograming;
 
+import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.GridLayout;
 
@@ -19,13 +20,15 @@ public class JPanelClass extends JFrame {
 		container.setLayout(new GridLayout(2, 1, 10, 10));
 		// 2.初始化一个面板，设置1行3列的网格布局
 		JPanel p1 = new JPanel(new GridLayout(1, 3, 10, 10));
+		p1.setLayout(new BorderLayout());
 		JPanel p2 = new JPanel(new GridLayout(1, 2, 10, 10));
 		JPanel p3 = new JPanel(new GridLayout(1, 2, 10, 10));
 		JPanel p4 = new JPanel(new GridLayout(2, 1, 10, 10));
 		// 3.在面板中添加按钮
-		p1.add(new JButton("1"));
-		p1.add(new JButton("2"));
-		p1.add(new JButton("3"));
+		p1.add(new JButton("1"), BorderLayout.NORTH);
+		p1.add(new JButton("2"), BorderLayout.EAST);
+		p1.add(new JButton("3"), BorderLayout.SOUTH);
+		p1.add(new JButton("333"), BorderLayout.CENTER);
 		p2.add(new JButton("4"));
 		p2.add(new JButton("5"));
 		p3.add(new JButton("6"));
