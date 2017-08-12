@@ -19,38 +19,39 @@ public class JButtonClass extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public JButtonClass() {
-		URL url = JButtonClass.class.getResource("wo.png");
+		URL url = JButtonClass.class.getResource("button.png");
 		Icon icon = new ImageIcon(url);
 		setLayout(new GridLayout(3, 2, 5, 5));
 		Container container = getContentPane();
 		for (int i = 0; i < 5; i++) {
-			// 1.´´½¨°´Å¥£¬Í¬Ê±ÉèÖÃ°´Å¥ÎÄ×ÖÓëÍ¼±ê
+			// 1.åˆ›å»ºæŒ‰é’®ï¼ŒåŒæ—¶è®¾ç½®æŒ‰é’®æ–‡å­—ä¸Žå›¾æ ‡
 			JButton jb = new JButton("button" + i, icon);
 			container.add(jb);
 			if (i % 2 == 0) {
+				// è®¾ç½®æŒ‰é’®ä¸å¯ç”¨
 				jb.setEnabled(false);
 			}
 		}
 
-		// 2.ÊµÀý»¯Ò»¸öÃ»ÓÐÎÄ×ÖÓëÍ¼Æ¬µÄ°´
+		// 2.åˆ›å»ºä¸€ä¸ªæ²¡æœ‰æ–‡å­—ä¸Žå›¾ç‰‡çš„æŒ‰é’®
 		JButton jb = new JButton();
-		// 3.ÉèÖÃ°´Å¥ÓëÍ¼Æ¬ÏàÍ¬´óÐ¡
+		// 3.è®¾ç½®æŒ‰é’®æœ€å¤§
 		jb.setMaximumSize(new Dimension(30, 30));
-		// 4.Îª°´Å¥ÉèÖÃÍ¼±ê
+		// 4.ä¸ºæŒ‰é’®è®¾ç½®å›¾æ ‡
 		jb.setIcon(icon);
 		jb.setText("button6");
 		jb.setHideActionText(true);
-		// 5.ÉèÖÃ°´Å¥ÌáÊ¾ÎªÎÄ×Ö
-		jb.setToolTipText("Í¼Æ¬°´Å¥");
-		// 6.ÉèÖÃ°´Å¥±ß½ç²»ÏÔÊ¾
+		// 5.è®¾ç½®æŒ‰é’®æç¤ºæ–‡å­—
+		jb.setToolTipText("å›¾ç‰‡æŒ‰é’®");
+		// 6.è®¾ç½®æŒ‰é’®è¾¹ç•Œä¸æ˜¾ç¤º
 		jb.setBorderPainted(false);
-		// 7.Îª°´Å¥Ìí¼Ó¼àÌýÊÂ¼þ
+		// 7.ä¸ºæŒ‰é’®æ·»åŠ ç›‘å¬äº‹ä»¶
 		jb.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// 8.µ¯³öÈ·ÈÏ¶Ô»°¿ò
-				JOptionPane.showMessageDialog(JButtonClass.this, "µ¯³ö¶Ô»°¿ò");
+				// 8.å¼¹å‡ºå¯¹è¯æ¡†
+				JOptionPane.showMessageDialog(JButtonClass.this, "å¼¹å‡ºå¯¹è¯æ¡†");
 			}
 
 		});

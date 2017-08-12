@@ -26,11 +26,11 @@ public class JCheckBoxClass extends JFrame {
 		JPanel panel1 = new JPanel();
 		JPanel panel2 = new JPanel();
 
-		URL url = JCheckBoxClass.class.getResource("wo.png");
+		URL url = JCheckBoxClass.class.getResource("button.png");
 		Icon icon = new ImageIcon(url);
-		JCheckBox jc1 = new JCheckBox("��ѡ��1", icon, true);
-		JCheckBox jc2 = new JCheckBox("��ѡ��2", true);
-		JCheckBox jc3 = new JCheckBox("��ѡ��3");
+		JCheckBox jc1 = new JCheckBox("复选框1", icon, true);
+		JCheckBox jc2 = new JCheckBox("复选框2", true);
+		JCheckBox jc3 = new JCheckBox("复选框3");
 
 		JTextArea jt = new JTextArea(10, 20);
 
@@ -45,9 +45,9 @@ public class JCheckBoxClass extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (jc1.isSelected()) {
-					jt.append(jc1.getText() + " ��ѡ��\n");
+					jt.append(jc1.getText() + " 被选中\n");
 				} else {
-					jt.append(jc1.getText() + " ��ȡ��ѡѡ�� \n");
+					jt.append(jc1.getText() + " 被取消选中 \n");
 				}
 
 			}

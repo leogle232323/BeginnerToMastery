@@ -11,26 +11,26 @@ public class AbsoluteLayout extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public AbsoluteLayout() {
-		// 1.ÉèÖÃ´°ÌåµÄ±êÌâ
-		setTitle("±¾´°ÌåÊ¹ÓÃ¾ø¶Ô²¼¾Ö");
-		// 2.Ê¹¸Ã´°ÌåÈ¡Ïû²¼¾Ö¹ÜÀíÆ÷ÉèÖÃ
+		// 1.è®¾ç½®çª—ä½“çš„æ ‡é¢˜
+		setTitle("æœ¬çª—ä½“ä½¿ç”¨ç»å¯¹å¸ƒå±€");
+		// 2.ä½¿è¯¥çª—ä½“å–æ¶ˆå¸ƒå±€ç®¡ç†å™¨è®¾ç½®
 		setLayout(null);
-		// 3.ÉèÖÃ´°ÌåµÄÎ»ÖÃ¡¢´óĞ¡
+		// 3.ç»å¯¹å®šä½çª—ä½“çš„ä½ç½®ä¸å¤§å°
 		setBounds(0, 0, 500, 500);
-		// 4.»ñÈ¡ÈİÆ÷¶ÔÏó
+		// 4.åˆ›å»ºå®¹å™¨å¯¹è±¡
 		Container container = getContentPane();
-		// 5.´´½¨°´Å¥
-		JButton b1 = new JButton("°´Å¥1");
-		JButton b2 = new JButton("°´Å¥2");
-		// 6.ÉèÖÃ°´Å¥µÄÎ»ÖÃ¡¢´óĞ¡
+		// 5.åˆ›å»ºæŒ‰é’®
+		JButton b1 = new JButton("æŒ‰é’®1");
+		JButton b2 = new JButton("æŒ‰é’®2");
+		// 6.è®¾ç½®æŒ‰é’®çš„ä½ç½®ä¸å¤§å°
 		b1.setBounds(10, 30, 80, 30);
-		b2.setBounds(60, 70, 100, 20);
-		// 7.½«°´Å¥Ìí¼Óµ½ÈİÆ÷ÖĞ
+		b2.setBounds(60, 70, 80, 30);
+		// 7.å°†æŒ‰é’®æ·»åŠ åˆ°å®¹å™¨ä¸­
 		container.add(b1);
 		container.add(b2);
-		// 8.ÉèÖÃ´°Ìå¿É¼û
+		// 8.è®¾ç½®çª—ä½“å¯è§
 		setVisible(true);
-		// 9.ÉèÖÃ´°Ìå¹Ø±Õ·½Ê½
+		// 9.è®¾ç½®çª—ä½“é»˜è®¤å…³é—­æ–¹å¼
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	}
 

@@ -12,7 +12,7 @@ public class GridLayoutClass extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public GridLayoutClass() {
-		setTitle("Õâ¸ö´°ÌåÊ¹ÓÃÍø¸ñ²¼¾Ö¹ÜÀíÆ÷");
+		setTitle("æœ¬çª—ä½“ä½¿ç”¨ç½‘æ ¼å¸ƒå±€ç®¡ç†å™¨");
 		Container container = getContentPane();
 		setLayout(new GridLayout(7, 3, 5, 5));
 		for (int i = 0; i < 20; i++) {

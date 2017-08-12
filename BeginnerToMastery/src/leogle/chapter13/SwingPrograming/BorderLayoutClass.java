@@ -10,18 +10,18 @@ import javax.swing.WindowConstants;
 public class BorderLayoutClass extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	// 1.¶¨Òå×é¼ş°Ú·ÅÎ»ÖÃµÄÊı×é
+	// 1.å®šä¹‰ç»„ä»¶æ‘†æ”¾ä½ç½®çš„æ•°ç»„
 	String[] border = { BorderLayout.CENTER, BorderLayout.NORTH, BorderLayout.SOUTH, BorderLayout.WEST,
 			BorderLayout.EAST };
 	String[] buttonName = { "center button", "north button", "south button", "west button", "east button" };
 
 	public BorderLayoutClass() {
-		setTitle("Õâ¸ö´°ÌåÊ¹ÓÃ±ß½ç²¼¾Ö¹ÜÀíÆ÷");
+		setTitle("æœ¬çª—ä½“ä½¿ç”¨è¾¹ç•Œå¸ƒå±€ç®¡ç†å™¨");
 		Container container = getContentPane();
-		// 2.ÉèÖÃ´°ÌåÊ¹ÓÃ±ß½ç²¼¾Ö¹ÜÀíÆ÷
+		// 2.è®¾ç½®çª—ä½“ä½¿ç”¨è¾¹ç•Œå¸ƒå±€ç®¡ç†å™¨
 		setLayout(new BorderLayout());
 		for (int i = 0; i < border.length; i++) {
-			// 3.ÔÚÈİÆ÷ÖĞÌí¼Ó°´Å¥£¬²¢ÉèÖÃ°´Å¥²¼¾Ö
+			// 3.åœ¨å®¹å™¨ä¸­æ·»åŠ æŒ‰é’®ï¼Œå¹¶è®¾ç½®æŒ‰é’®å¸ƒå±€
 			container.add(new JButton(buttonName[i]), border[i]);
 		}
 

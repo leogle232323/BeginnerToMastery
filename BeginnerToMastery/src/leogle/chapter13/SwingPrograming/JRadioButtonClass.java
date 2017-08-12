@@ -18,15 +18,15 @@ public class JRadioButtonClass extends JFrame {
 	public JRadioButtonClass() {
 		setLayout(new FlowLayout());
 
-		URL url = JRadioButtonClass.class.getResource("wo.png");
+		URL url = JRadioButtonClass.class.getResource("button.png");
 		Icon icon = new ImageIcon(url);
 		Container container = getContentPane();
-		// 1.´´½¨µ¥Ñ¡°´Å¥
-		JRadioButton jr1 = new JRadioButton("µ¥Ñ¡°´Å¥1", icon, true);
+		// 1.åˆ›å»ºå•é€‰æŒ‰é’®
+		JRadioButton jr1 = new JRadioButton("å•é€‰æŒ‰é’®1", icon, true);
 		jr1.setSelected(true);
-		JRadioButton jr2 = new JRadioButton("µ¥Ñ¡°´Å¥2");
-		JRadioButton jr3 = new JRadioButton("µ¥Ñ¡°´Å¥3");
-		// 2.½«µ¥Ñ¡°´Å¥Ìí¼Óµ½°´Å¥×éÖĞ
+		JRadioButton jr2 = new JRadioButton("å•é€‰æŒ‰é’®2");
+		JRadioButton jr3 = new JRadioButton("å•é€‰æŒ‰é’®3");
+		// 2.å°†å•é€‰æŒ‰é’®æ·»åŠ è¿›æŒ‰é’®ç»„
 		ButtonGroup group = new ButtonGroup();
 		group.add(jr1);
 		group.add(jr2);

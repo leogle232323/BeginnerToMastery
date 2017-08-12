@@ -12,11 +12,11 @@ public class FlowLayoutClass extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public FlowLayoutClass() {
-		setTitle("±¾´°ÌåÊ¹ÓÃÁ÷²¼¾Ö¹ÜÀíÆ÷");
+		setTitle("æœ¬çª—ä½“ä½¿ç”¨æµå¸ƒå±€ç®¡ç†å™¨");
 		Container container = getContentPane();
-		// 1.ÉèÖÃ´°ÌåÊ¹ÓÃÁ÷²¼¾Ö¹ÜÀíÆ÷£¬Ê¹×é¼şÓÒ¶ÔÆë£¬²¢ÇÒÉèÖÃ×é¼şÖ®¼äµÄË®Æ½¼ä¸ôÓë´¹Ö±¼ä¸ô
-		setLayout(new FlowLayout(0, 10, 10));
-		// 2.ÔÚÈİÆ÷ÖĞÑ­»·Ìí¼Ó10¸ö°´Å¥
+		// 1.è®¾ç½®çª—ä½“ä½¿ç”¨æµå¸ƒå±€ç®¡ç†å™¨ï¼Œä½¿ç»„ä»¶å³å¯¹é½ï¼ˆé»˜è®¤å±…ä¸­å¯¹é½ï¼‰ï¼Œå¹¶ä¸”è®¾ç½®ç»„ä»¶ä¹‹é—´çš„æ°´å¹³é—´éš”å’Œå‚ç›´é—´éš”
+		setLayout(new FlowLayout(2, 10, 10));
+		// 2.åœ¨å®¹å™¨ä¸­å¾ªç¯æ·»åŠ 10ä¸ªæŒ‰é’®
 		for (int i = 0; i < 10; i++) {
 			container.add(new JButton("button" + i));
 		}

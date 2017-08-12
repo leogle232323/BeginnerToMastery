@@ -14,17 +14,17 @@ public class JPanelClass extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public JPanelClass() {
-		setTitle("JPanelÃæ°å");
+		setTitle("JPanelé¢æ¿");
 		Container container = getContentPane();
-		// 1.½«Õû¸öÈİÆ÷ÉèÖÃÎª2ĞĞ1ÁĞµÄÍø¸ñ²¼¾Ö
-		container.setLayout(new GridLayout(2, 1, 10, 10));
-		// 2.³õÊ¼»¯Ò»¸öÃæ°å£¬ÉèÖÃ1ĞĞ3ÁĞµÄÍø¸ñ²¼¾Ö
+		// 1.å°†æ•´ä¸ªå®¹å™¨è®¾ç½®ä¸º2è¡Œ1åˆ—çš„ç½‘æ ¼å¸ƒå±€
+		setLayout(new GridLayout(2, 1, 10, 10));
+		// 2.åˆ›å»ºé¢æ¿
 		JPanel p1 = new JPanel(new GridLayout(1, 3, 10, 10));
 		p1.setLayout(new BorderLayout());
 		JPanel p2 = new JPanel(new GridLayout(1, 2, 10, 10));
 		JPanel p3 = new JPanel(new GridLayout(1, 2, 10, 10));
 		JPanel p4 = new JPanel(new GridLayout(2, 1, 10, 10));
-		// 3.ÔÚÃæ°åÖĞÌí¼Ó°´Å¥
+		// 3.åœ¨é¢æ¿ä¸­æ·»åŠ æŒ‰é’®
 		p1.add(new JButton("1"), BorderLayout.NORTH);
 		p1.add(new JButton("2"), BorderLayout.EAST);
 		p1.add(new JButton("3"), BorderLayout.SOUTH);
@@ -36,7 +36,7 @@ public class JPanelClass extends JFrame {
 		p4.add(new JButton("8"));
 		p4.add(new JButton("9"));
 
-		// 4.½«Ãæ°åÌí¼Óµ½ÈİÆ÷ÖĞ
+		// 4.åœ¨å®¹å™¨ä¸­æ·»åŠ é¢æ¿
 		container.add(p1);
 		container.add(p2);
 		container.add(p3);

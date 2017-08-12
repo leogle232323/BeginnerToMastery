@@ -23,15 +23,16 @@ public class FocusEventClass extends JFrame {
 		container.add(jt);
 		container.add(jt2);
 		jt.addFocusListener(new FocusListener() {
-
+			// 组件获得焦点时，调用该方法
 			@Override
 			public void focusGained(FocusEvent e) {
 
 			}
 
+			// 组件失去焦点时，调用该方法
 			@Override
 			public void focusLost(FocusEvent e) {
-				JOptionPane.showMessageDialog(FocusEventClass.this, "文本框失去焦点");
+				JOptionPane.showMessageDialog(FocusEventClass.this, "文本框失去焦点!");
 			}
 
 		});

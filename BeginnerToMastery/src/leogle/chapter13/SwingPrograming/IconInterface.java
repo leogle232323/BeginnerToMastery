@@ -13,30 +13,30 @@ import javax.swing.WindowConstants;
 
 public class IconInterface implements Icon {
 
-	// 1.ÉùÃ÷Í¼±êµÄ¿í
+	// 1.å£°æ˜å›¾æ ‡çš„å®½
 	private int width;
-	// 2.ÉùÃ÷Í¼±êµÄ¸ß
+	// 2.å£°æ˜å›¾æ ‡çš„é«˜
 	private int height;
 
-	// 3.¶¨Òå¹¹Ôì·½·¨
+	// 3.å®šä¹‰æ„é€ æ–¹æ³•
 	public IconInterface(int width, int height) {
 		this.width = width;
 		this.height = height;
 	}
 
-	// 4.ÊµÏÖpaintIcon·½·¨,»æÖÆÒ»¸öÔ²ĞÎ£¨ÍÖÔ²£©
+	// 4.å®ç° paintIconæ–¹æ³•
 	@Override
 	public void paintIcon(Component c, Graphics g, int x, int y) {
 		g.fillOval(x, y, width, height);
 	}
 
-	// 5.ÊµÏÖgetIconWidth()·½·¨
+	// 5.å®ç°getIconWidth()æ–¹æ³•
 	@Override
 	public int getIconWidth() {
 		return this.width;
 	}
 
-	// 6.ÊµÏÖgetIconHeight()·½·¨
+	// 6.å®ç°getIconHeight()æ–¹æ³•
 	@Override
 	public int getIconHeight() {
 		return this.height;
@@ -44,10 +44,10 @@ public class IconInterface implements Icon {
 
 	public static void main(String[] args) {
 		Icon icon = new IconInterface(20, 20);
-		// 1.´´½¨Ò»¸ö´øÎÄ±¾ºÍÍ¼±êµÄ±êÇ©£¬²¢ÉèÖÃ±êÇ©ÉÏµÄÎÄ×ÖÔÚ±êÇ©ÕıÖĞ¼ä
-		JLabel jl = new JLabel("²âÊÔ", icon, SwingConstants.LEFT);
+		// 1.åˆ›å»ºä¸€ä¸ªæ ‡ç­¾ï¼Œå¹¶è®¾ç½®æ ‡ç­¾ä¸Šçš„æ–‡å­—åœ¨æ ‡ç­¾ä¸­é—´
+		JLabel jl = new JLabel("æµ‹è¯•", icon, SwingConstants.CENTER);
 
-		// 2.´´½¨Ò»¸öJFrame´°¿Ú
+		// 2.åˆ›å»ºä¸€ä¸ªJFrameçª—å£
 		JFrame jf = new JFrame();
 		Container container = jf.getContentPane();
 		container.add(jl);

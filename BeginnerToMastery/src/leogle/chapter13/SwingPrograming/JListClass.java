@@ -25,7 +25,7 @@ public class JListClass extends JFrame {
 		container.add(js);
 
 		// 2.使用数组作为初始化列表框的参数
-		String[] contents = { "列表1", "列表2", "列表3", "列表4", "列表5", "列表6" };
+		String[] contents = { "列表1", "列表2", "列表3", "列表4", "列表5" };
 		JList<String> jList2 = new JList<>(contents);
 		JScrollPane js2 = new JScrollPane(jList2);
 		js2.setBounds(200, 200, 100, 100);
@@ -67,7 +67,7 @@ class MyListModel extends AbstractListModel<String> {
 
 	private static final long serialVersionUID = 1L;
 	// 设置列表框内容
-	private String[] contents = { "列表1", "列表2", "列表3", "列表4", "列表5", "列表6" };
+	private String[] contents = { "列表1", "列表2", "列表3", "列表4" };
 
 	@Override
 	public int getSize() {

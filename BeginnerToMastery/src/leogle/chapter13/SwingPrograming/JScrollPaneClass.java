@@ -13,13 +13,13 @@ public class JScrollPaneClass extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public JScrollPaneClass() {
-		setTitle("´ø¹ö¶¯ÌõµÄÎÄ×Ö±à¼­Æ÷");
+		setTitle("JScrollPaneé¢æ¿");
 		Container container = getContentPane();
-		// 1.´´½¨ÎÄ±¾ÇøÓò×é¼ş
-		JTextArea jt = new JTextArea(20, 50);
-		// 2.´´½¨JScrollPaneÃæ°å¶ÔÏó
+		// 1.åˆ›å»ºæ–‡æœ¬åŸŸç»„ä»¶
+		JTextArea jt = new JTextArea(10, 50);
+		// 2.åˆ›å»ºJScrollPaneé¢æ¿
 		JScrollPane js = new JScrollPane(jt);
-		// 3.½«Ãæ°åÌí¼Óµ½ÈİÆ÷ÖĞ
+		// 3.å°†é¢æ¿æ·»åŠ åˆ°å®¹å™¨ä¸­
 		container.add(js, BorderLayout.NORTH);
 
 		setSize(500, 500);

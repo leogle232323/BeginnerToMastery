@@ -16,6 +16,7 @@ public class JPasswordFieldClass extends JFrame {
 		setLayout(new FlowLayout(1, 10, 10));
 		Container container = getContentPane();
 		JPasswordField jp = new JPasswordField(20);
+		// 设置回显字符
 		jp.setEchoChar('*');
 		container.add(jp);
 		setSize(500, 500);
