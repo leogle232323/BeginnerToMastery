@@ -17,7 +17,7 @@ public class ZipInputStreamClass {
 		// 3.获取下一个ZipEntry
 		ZipEntry entry = zin.getNextEntry();
 		System.out.println(entry.getName());
-		// 4.如果entry不为空并且不是目录
+		// 4.如果entry不为空
 		while (((entry = zin.getNextEntry()) != null)) {
 			String fileName = entry.getName();
 			String unzipDir = "f:\\";
