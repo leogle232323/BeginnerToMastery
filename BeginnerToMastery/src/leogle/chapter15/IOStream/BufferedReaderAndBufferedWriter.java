@@ -14,12 +14,12 @@ public class BufferedReaderAndBufferedWriter {
 		// 1.定义字符串数组
 		String[] content = { "好久不见", "最近好么", "常联系" };
 		// 2.创建文件对象
-		File file = new File("word.txt");
+		File file = new File("buffered.txt");
 		// 3.创建FileWriter对象
 		FileWriter fw = new FileWriter(file);
 		// 4.创建BufferedWriter对象
 		BufferedWriter bfw = new BufferedWriter(fw);
-		// 5.循环遍历数组，
+		// 5.循环遍历数组
 		for (int i = 0; i < content.length; i++) {
 			// 6.将字符串数组中的元素写入到磁盘文件中
 			bfw.write(content[i]);
