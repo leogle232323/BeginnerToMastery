@@ -1,6 +1,7 @@
 package leogle.chapter16.Reflect;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 
 import org.junit.Test;
@@ -30,6 +31,13 @@ class Example {
 			i3 = Integer.valueOf(strings[2]);
 		}
 
+	}
+
+	public void print() {
+		System.out.println("s=" + s);
+		System.out.println("i=" + i);
+		System.out.println("i2=" + i2);
+		System.out.println("i3=" + i3);
 	}
 }
 
@@ -156,6 +164,54 @@ public class AccessConstructor {
 		for (Constructor<?> value : declaredConstructors) {
 			int modifier = value.getModifiers();
 			System.out.println("构造方法" + value + "所有修饰符为：" + Modifier.toString(modifier));
+		}
+	}
+
+	@Test
+	public void testExample() {
+		Example e = new Example();
+		Class<?> exampleC = e.getClass();
+		Constructor<?>[] constructors = exampleC.getDeclaredConstructors();
+		for (int i = 0; i < constructors.length; i++) {
+			Constructor<?> constructor = constructors[i];
+			System.out.println("------查看是否允许带有可变量的参数------");
+			System.out.println(constructor + ":" + constructor.isVarArgs());
+			System.out.println("------获取所有参数类型------");
+			Class<?>[] parameterTypes = constructor.getParameterTypes();
+			for (Class<?> value : parameterTypes) {
+				System.out.println(value);
+			}
+			System.out.println("------获取所有可能抛出的异常信息类型------");
+			Class<?>[] exceptionTypes = constructor.getExceptionTypes();
+			for (Class<?> value : exceptionTypes) {
+				System.out.println(value);
+			}
+
+			Example example = null;
+			while (example == null) {
+
+				try {
+					if (i == 2)
+						example = (Example) constructor.newInstance();
+					else if (i == 1)
+						example = (Example) constructor.newInstance("5", 5);
+					else {
+						String[] str = new String[] { "333", "444", "555" };
+						Object[] para = str;
+						example = (Example) constructor.newInstance(para);
+					}
+				} catch (InstantiationException e1) {
+					e1.printStackTrace();
+				} catch (IllegalAccessException e1) {
+					// 设置允许访问构造方法
+					constructor.setAccessible(true);
+				} catch (IllegalArgumentException e1) {
+					e1.printStackTrace();
+				} catch (InvocationTargetException e1) {
+					e1.printStackTrace();
+				}
+			}
+			example.print();
 		}
 	}
 
