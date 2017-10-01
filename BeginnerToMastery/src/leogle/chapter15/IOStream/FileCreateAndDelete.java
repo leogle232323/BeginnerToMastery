@@ -7,7 +7,7 @@ public class FileCreateAndDelete {
 
 	public static void main(String[] args) {
 		// 1.创建文件对象
-		File file = new File("word.txt");
+		File file = new File("isExists.txt");
 		if (file.exists()) {
 			// 如果文件存在，则删除
 			file.delete();

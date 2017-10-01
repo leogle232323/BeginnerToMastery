@@ -124,14 +124,14 @@ public class ClassAndReflect {
 		}
 
 		// 5.获得类的构造方法
-		// 5.1 获得所有权限为public的构造方法（包含父类的public构造方法）
+		// 5.1 获得所有权限为public的构造方法
 		Constructor<?>[] constructors = sonClass.getConstructors();
 		System.out.println("类Son所有权限为public的构造方法为：");
 		for (Constructor<?> value : constructors) {
 			System.out.println(value);
 		}
 
-		// 5.2 获得权限为public的指定构造方法（包含父类的public构造方法）
+		// 5.2 获得权限为public的指定构造方法）
 		Constructor<?> constructor = null;
 		try {
 			constructor = sonClass.getConstructor(String.class, String.class);
@@ -198,14 +198,14 @@ public class ClassAndReflect {
 		System.out.println("类Son指定方法为：" + getDeclaredMethod);
 
 		// 7.获得类的成员变量
-		// 7.1获得所有权限为public的成员变量
+		// 7.1获得所有权限为public的成员变量（包含父类public成员变量）
 		Field[] fields = sonClass.getFields();
 		System.out.println("类Son所有权限为public的成员变量为：");
 		for (Field value : fields) {
 			System.out.println(value);
 		}
 
-		// 7.2 获得权限为public的指定成员变量
+		// 7.2 获得权限为public的指定成员变量（包含父类public成员变量）
 		Field field = null;
 		try {
 			field = sonClass.getField("name");

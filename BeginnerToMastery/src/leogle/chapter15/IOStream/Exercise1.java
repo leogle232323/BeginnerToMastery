@@ -12,7 +12,7 @@ import javax.swing.ProgressMonitorInputStream;
  */
 public class Exercise1 {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) throws IOException {
 		// 1.设置每次读取的字节数
 		byte[] b = new byte[2];
 		// 2.创建文件输入流对象
@@ -24,7 +24,11 @@ public class Exercise1 {
 			String s = new String(b);
 			System.out.println(s);
 			// 4.暂停500毫秒，方便观察
-			Thread.sleep(50);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				System.out.println("程序终止！");
+			}
 		}
 		// 5.关闭输入流
 		fis.close();
