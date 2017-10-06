@@ -54,7 +54,19 @@ enum AnyEnum implements d {
 		public int getI() {
 			return i;
 		}
-	};
+	},
+	Enum_E;
+
+	// 成员方法
+	@Override
+	public String getDescription() {
+		return "我是枚举成员";
+	}
+
+	@Override
+	public int getI() {
+		return i;
+	}
 
 	private static int i = 5;
 
