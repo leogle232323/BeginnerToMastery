@@ -191,22 +191,28 @@ public class AccessConstructor {
 			while (example == null) {
 
 				try {
-					if (i == 2)
+					if (parameterTypes.length == 0) {
 						example = (Example) constructor.newInstance();
-					else if (i == 1)
+						break;
+					} else if (parameterTypes.length == 2) {
 						example = (Example) constructor.newInstance("5", 5);
-					else {
-						String[] str = new String[] { "333", "444", "555" };
-						Object[] para = str;
-						example = (Example) constructor.newInstance(para);
+						break;
+					} else if (parameterTypes.length == 1) {
+						String[] str = new String[] { "3", "4" };
+						// 将str数组转换为Object对象，否则编译器会将str当做可变长度的参数
+						example = (Example) constructor.newInstance((Object) str);
+						break;
 					}
 				} catch (InstantiationException e1) {
 					e1.printStackTrace();
 				} catch (IllegalAccessException e1) {
 					// 设置允许访问构造方法
 					constructor.setAccessible(true);
+					System.out.println("权限不够！");
 				} catch (IllegalArgumentException e1) {
+					System.out.println("参数非法！");
 					e1.printStackTrace();
+					break;
 				} catch (InvocationTargetException e1) {
 					e1.printStackTrace();
 				}
